@@ -13,7 +13,6 @@
     color: white;
 }
 
-.header a:hover{
-    color: orange;
-    transition: 0.5s;
+.link-items {
+    display: flex;
 }

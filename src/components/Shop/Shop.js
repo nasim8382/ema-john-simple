@@ -1,34 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
+import React from 'react';
+import useCart from '../../hooks/useCart';
+import useProducts from '../../hooks/useProducts';
+import { addToDb, deleteShoppingCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import CustomLink from '../CustomLink/CustomLink';
 import './Shop.css';
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
-
-    useEffect( () => {
-      fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data));
-    }, [])
-
-    useEffect( () => {
-        const storedCart = getStoredCart();
-        const savedCart = [];
-        for ( const id in storedCart) {
-            if(storedCart) {
-                const addedProduct = products.find(product => product.id === id);
-                if(addedProduct) {
-                    const quantity = storedCart[id];
-                    addedProduct.quantity = quantity;
-                    savedCart.push(addedProduct);
-                }
-            }
-        }
-        setCart(savedCart);
-    }, [products])
+    const [products, setProducts] = useProducts();
+    const [cart, setCart] = useCart(products);
 
     const handleAddToCart = (selectedProduct) => {
         let newCart;
@@ -46,6 +29,11 @@ const Shop = () => {
         addToDb(selectedProduct.id);
     };
 
+    const removeAll = () => {
+        setCart([]);
+        deleteShoppingCart();
+    };
+
     return (
         <div className='shop-container'>
             <div className='products-container'>
@@ -58,7 +46,24 @@ const Shop = () => {
                 }
             </div>
             <div className='cart-container'>
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <div className='cart-button'>
+                        <button onClick={removeAll} className='clear-btn'>
+                            <div className='clear-btn-div'>
+                                <p>Clear Cart</p>
+                                <FontAwesomeIcon className='clear-icon' icon={faTrashCan}></FontAwesomeIcon>
+                            </div>
+                        </button>
+                        <CustomLink to="/orders">
+                            <button className='review-btn'>
+                                <div className='review-btn-div'>
+                                    <p>Review Order</p>
+                                    <FontAwesomeIcon className='review-icon' icon={faArrowRight}></FontAwesomeIcon>
+                                </div>
+                            </button>
+                        </CustomLink>
+                    </div>
+                </Cart>
             </div>
         </div>
     );

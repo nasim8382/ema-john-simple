@@ -1,0 +1,17 @@
+.inventory-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-line {
+    height: 57px;
+    width: 5px;
+    background-color: #FF9900;
+    margin: 0px 35px;
+}
+
+.inventory-page p {
+    color: #2A414F;
+    font-size: 62px;
+}

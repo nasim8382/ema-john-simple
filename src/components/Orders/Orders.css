@@ -1,0 +1,27 @@
+.orders-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0px;
+}
+
+.ordered-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.orders-clear-btn, .orders-review-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.orders-summary{
+    background-color: rgba(255, 153, 0, 0.3);
+    width: 333px;
+    height: 550px;
+    position: sticky;
+    top: 0;
+    border-radius: 15px;
+}

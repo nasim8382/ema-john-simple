@@ -1,7 +1,6 @@
 .shop-container {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    font-family: lato;
 }
 
 .products-container{
@@ -14,11 +13,54 @@
 
 .cart-container {
     background-color: rgba(255, 153, 0, 0.3);
-    height: 555px;
     width: 264px;
-    border-radius: 0px 0px 10px 10px;
+    height: 600px;
     position: sticky;
     top: 0;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.cart-button button{
+    display: block;
+    border: none;
+    width: 232px;
+    height: 48px;
+    border-radius: 4px;
+    margin: 16px auto;
+    font-size: 17px;
+    color: white;
+}
+
+.clear-btn {
+    background-color: #FF3030;
+    cursor: pointer;
+}
+
+.clear-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-icon {
+    margin-left: 12px;
+    font-size: 20px;
+}
+
+.review-btn {
+    background-color: #FF9900;
+    cursor: pointer;
+}
+
+.review-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-icon {
+    margin-left: 7px;
+    font-size: 21px;
 }
 
 
