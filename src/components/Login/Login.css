@@ -1,0 +1,133 @@
+.form-bg {
+    width: 500px;
+    height: 600px;
+    background-color: #FFE0B3;
+    border-radius: 8px;
+    margin: 100px auto;
+}
+.form-container {
+    width: 500px;
+    height: 600px;
+    background: #FFFFFF;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transform: translate(12px, -13px);
+    display: flex;
+    justify-content: center;
+}
+
+.form-title {
+    color: #2A414F;
+    font-weight: 400;
+    font-size: 35px;
+    margin-top: 38px;
+    margin-bottom: 29px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    color: #2A414F;
+    margin-left: 10px;
+    margin-bottom: 9px;
+}
+
+.input-group input {
+    width: 415px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.loading-text {
+    margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: -7px;
+}
+
+.form-submit {
+    width: 415px;
+    height: 55px;
+    margin-top: 24px;
+    font-size: 21px;
+    color: #0E161A;
+    background-color: rgba(255, 153, 0, 0.3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: rgba(255, 153, 0, 0.6);
+    transition: 0.4s;
+}
+
+.form-text {
+    color: #2A414F;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.form-link {
+    color: #FF9900;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.or-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.or-text p {
+    font-size: 17px;
+    color: #95A0A7;
+    margin: 25px 26px;
+}
+
+.straight-line {
+    width: 145px;
+    height: 0px;
+    border: 1px solid #95A0A7;
+}
+
+.google-sign-in-btn {
+    width: 415px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.google-sign-in-btn:hover {
+    background-color: rgb(226, 224, 224);
+    transition: 0.3s;
+}
+
+.google-sign-in-btn img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.google-sign-in-btn p {
+    font-weight: 400;
+    font-size: 17px;
+    color: #2A414F;
+}

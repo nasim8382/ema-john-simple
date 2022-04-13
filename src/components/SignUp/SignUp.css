@@ -1,0 +1,25 @@
+.form-bg-sign-up {
+    width: 500px;
+    height: 700px;
+    background-color: #FFE0B3;
+    border-radius: 8px;
+    margin: 100px auto;
+}
+.form-container-sign-up {
+    width: 500px;
+    height: 700px;
+    background: #FFFFFF;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transform: translate(12px, -13px);
+    display: flex;
+    justify-content: center;
+}
+
+.error-text {
+    color: red;
+    margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: -7px;
+}
