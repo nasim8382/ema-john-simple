@@ -16,3 +16,16 @@
 .link-items {
     display: flex;
 }
+
+.sign-out-btn {
+    margin-left: 20px;
+    border: none;
+    color: white;
+    background-color: #1C2B35;
+}
+
+.sign-out-btn:hover {
+    color: goldenrod;
+    transition: 0.4s;
+    cursor: pointer;
+}

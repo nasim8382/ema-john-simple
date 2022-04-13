@@ -47,9 +47,9 @@ const Orders = () => {
                             </div>
                         </button>
                         {/* <CustomLink to="/inventory"> */}
-                            <button onClick={() => navigate('/inventory')} className='review-btn'>
+                            <button onClick={() => navigate('/shipment')} className='review-btn'>
                                 <div className='orders-review-btn'>
-                                    <p>Proceed Checkout</p>
+                                    <p>Proceed Shipping</p>
                                     <FontAwesomeIcon className='review-icon' icon={faCreditCard}></FontAwesomeIcon>
                                 </div>
                             </button>
